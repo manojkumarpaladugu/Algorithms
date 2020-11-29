@@ -11,11 +11,11 @@
 
   Args:
     INPUT:
-      UINT32 arr:
+      const UINT32 arr:
         It's an array of integers.
-      UINT32 arr_size:
+      const UINT32 arr_size:
         It's the size of array being passed.
-      UINT32 x:
+      const UINT32 x:
         It's the element to be searched in the array.
     OUTPUT:
       UINT32 index:
@@ -26,10 +26,10 @@
     FALSE: Element not found in the array
 */
 BOOLEAN BinarySearch(
-  UINT32  *arr,
-  UINT32  arr_size,
-  UINT32  x,
-  UINT32  &index
+  const UINT32  *arr,
+  const UINT32  arr_size,
+  const UINT32  x,
+  UINT32        &index
 )
 {
   if (arr == NULL) {
