@@ -21,7 +21,7 @@
     TRUE:  Element found in the array
     FALSE: Element not found in the array
 */
-BOOLEAN LinearSearch(
+BOOLEAN LinearSearch (
   const UINT32  *arr,
   const UINT32  arr_size,
   const UINT32  x,
@@ -41,7 +41,7 @@ BOOLEAN LinearSearch(
   return FALSE;
 }
 
-int main()
+int main ()
 {
   UINT32 arr[] = { 2,5,8,12,16,23,28,38,56,72,91,102,121,132,150 };
   UINT32 x;
@@ -57,7 +57,7 @@ int main()
   std::cout << std::endl;
   std::cout << "Enter a number: ";
   std::cin >> x;
-  Status = LinearSearch(arr, sizeof(arr) / sizeof(*arr), x, Index);
+  Status = LinearSearch (arr, sizeof(arr) / sizeof(*arr), x, Index);
   if (Status)
     std::cout << x << " is found at index " << Index << std::endl;
   else
