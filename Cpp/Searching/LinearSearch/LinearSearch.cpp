@@ -25,7 +25,7 @@
 BOOLEAN LinearSearch(
   UINT32* arr,
   UINT32  arr_size,
-  UINT32  element,
+  UINT32  x,
   UINT32& index)
 {
   if (arr == NULL) {
@@ -34,7 +34,7 @@ BOOLEAN LinearSearch(
   }
 
   for (UINT32 i = 0; i < arr_size; i++) {
-    if (element == arr[i]) {
+    if (x == arr[i]) {
       index = i;
       return TRUE;
     }
