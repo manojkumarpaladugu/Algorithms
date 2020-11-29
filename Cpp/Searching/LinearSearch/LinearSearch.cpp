@@ -23,10 +23,10 @@
     FALSE: Element not found in the array
 */
 BOOLEAN LinearSearch(
-  UINT32* arr,
+  UINT32  *arr,
   UINT32  arr_size,
   UINT32  x,
-  UINT32& index)
+  UINT32  &index)
 {
   if (arr == NULL) {
     std::cout << "Null pointer" << std::endl;
