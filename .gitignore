@@ -1,5 +1,8 @@
-Cpp/Searching/Debug/x64/
+Cpp/Searching/Debug/
+Cpp/Searching/Release/
 Cpp/Searching/.vs/
-Cpp/Searching/BinarySearch/Debug/x64/
-Cpp/Searching/LinearSearch/Debug/x64/
+Cpp/Searching/BinarySearch/Debug/
+Cpp/Searching/BinarySearch/Release/
+Cpp/Searching/LinearSearch/Debug/
+Cpp/Searching/LinearSearch/Release/
 *.vcxproj.user
