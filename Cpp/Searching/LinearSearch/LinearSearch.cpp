@@ -16,7 +16,7 @@
 
 	OUTPUT:
 	  UINT32 index:
-	    It's the index of element found in array.
+	    It's the index of x found in array.
 
   Returns:
     TRUE:  Element found in the array
