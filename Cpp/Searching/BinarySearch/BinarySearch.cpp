@@ -4,10 +4,10 @@
 /*
   Binary Search Algorithm:
     1. Divide the array into two halves. 0th index as Low, last index as High and a middle.
-    2. Compare element with the middle element.
-    3. If element matches with middle element, we return the mid index.
-    4. Else If element is greater than the mid element, then element can only lie in right half subarray after the mid element. So we recur for right half.
-    5. Else (element is smaller) recur for the left half.
+    2. Compare x with the middle element.
+    3. If x matches with middle element, we return the mid index.
+    4. Else If x is greater than the mid element, then x can only lie in right half subarray after the mid element. So we recur for right half.
+    5. Else (x is smaller) recur for the left half.
 
   Args:
     INPUT:
@@ -19,7 +19,7 @@
         It's the element to be searched in the array.
     OUTPUT:
       UINT32 index:
-        It's the index of element found in array.
+        It's the index of x found in array.
 
   Returns:
     TRUE:  Element found in the array
@@ -28,7 +28,7 @@
 BOOLEAN BinarySearch(
   UINT32  *arr,
   UINT32  arr_size,
-  UINT32  element,
+  UINT32  x,
   UINT32  &index
 )
 {
@@ -40,11 +40,11 @@ BOOLEAN BinarySearch(
   for (UINT32 low = 0, mid = 0, high = arr_size - 1; low <= high;) {
     mid = ((high - low) / 2) + low;
 
-    if (element == arr[mid]) {
+    if (x == arr[mid]) {
       index = mid;
       return TRUE;
     }
-    else if (element < arr[mid])
+    else if (x < arr[mid])
       high = mid - 1;
     else
       low = mid + 1;
