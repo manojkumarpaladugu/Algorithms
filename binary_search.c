@@ -3,6 +3,7 @@
 
 uint32_t binary_search(uint8_t arr[], uint32_t size, uint32_t target)
 {
+    // Pre-requisite: Binary search requires array to be sorted in ascending order.
     uint32_t found_idx = -1;
     uint32_t first_idx =0;
     uint32_t last_idx = size - 1;
