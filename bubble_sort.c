@@ -4,6 +4,8 @@
 
 void bubble_sort(uint8_t* arr, uint32_t size)
 {
+    // Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them until they are in the intended order.
+
     for(uint32_t step = 0; step < (size - 1); step++)
     {
         bool swapped = false;
