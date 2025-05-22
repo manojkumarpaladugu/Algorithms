@@ -5,7 +5,7 @@ typedef struct {
 } Item;
 
 typedef struct {
-    void* pBuffer;
+    Item* pBuffer;
     int   size;
     int   currentCount;
     int   head;
@@ -46,7 +46,7 @@ bool myCircularQueueEnQueue(MyCircularQueue* obj, int value) {
     if (obj && !myCircularQueueIsFull(obj))
     {
         // Get pointer to free entry
-        Item* pItem = obj->pBuffer + (obj->tail * sizeof(Item));
+        Item* pItem = obj->pBuffer + obj->tail;
         pItem->val = value;
         // Increment the tail position
         obj->tail = ((obj->tail + 1) == obj->size) ? 0 : (obj->tail + 1);
@@ -74,7 +74,7 @@ int myCircularQueueFront(MyCircularQueue* obj) {
     int val = -1;
     if (obj && !myCircularQueueIsEmpty(obj))
     {
-        Item* pItem = obj->pBuffer + (obj->head * sizeof(Item));
+        Item* pItem = obj->pBuffer + obj->head;
         val = pItem->val;
     }
     return val;
@@ -85,7 +85,7 @@ int myCircularQueueRear(MyCircularQueue* obj) {
     if (obj && !myCircularQueueIsEmpty(obj))
     {
         int tailIndex = (obj->tail == 0) ? obj->size - 1 : obj->tail - 1;
-        Item* pItem = obj->pBuffer + (tailIndex * sizeof(Item));
+        Item* pItem = obj->pBuffer + tailIndex;
         val = pItem->val;
     }
     return val;
